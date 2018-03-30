@@ -19,4 +19,4 @@
 
 - name: Docker | CE | APT | Install Docker Engine
   apt: name=docker-ce state=present
-  notify: Docker | Restart Docker
+  notify: Docker | Service

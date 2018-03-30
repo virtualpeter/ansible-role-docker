@@ -1,9 +1,10 @@
 ---
-- name: Docker | Daemon-reload
-  shell: systemctl daemon-reload
-
-- name: Docker | Restart Docker
-  service: name=docker state=restarted
+- name: Docker | Service
+  systemd:
+    name: docker
+    enabled: {{ docker_service_enabled }}
+    state: {{ docker_service_state }}
+    daemon-reload: yes
 
 - name: Docker | CE | APT | Upgrade to Edge
   apt: name=docker-ce state=latest

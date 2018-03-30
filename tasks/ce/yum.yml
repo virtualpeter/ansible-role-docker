@@ -32,4 +32,4 @@
 
 - name: Docker | CE | YUM | Install Docker Application
   yum: name=docker-ce   state=present
-  notify: Docker | Restart Docker
+  notify: Docker | Service

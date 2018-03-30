@@ -5,5 +5,4 @@
 - name: Docker | Proxy | Docker service params
   template: src=http-proxy.conf.j2 dest=/etc/systemd/system/docker.service.d/http-proxy.conf
   notify:
-    - Docker | Daemon-reload
-    - Docker | Restart Docker
+    - Docker | Service

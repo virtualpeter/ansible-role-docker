@@ -13,4 +13,4 @@
 
 - name: DNF | Install Docker Application
   dnf: name=docker-engine state=present
-  notify: Docker | Restart Docker
+  notify: Docker | Service

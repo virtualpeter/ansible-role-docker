@@ -28,4 +28,4 @@
 
 - name: Docker | EE | YUM | Install Docker Application
   yum: name=docker-ee state=present
-  notify: Docker | Restart Docker
+  notify: Docker | Service

@@ -18,7 +18,7 @@ Supports the following Operating Systems:
 
 ## Requirements
 
-This role requires Ansible 2.0.0 or higher. Requirements are listed in the metadata file.
+This role requires Ansible 2.2.0 or higher. Requirements are listed in the metadata file.
 
 If you rely on privileage escalation (e.g. `become: true`) with this role, you will need Ansible 2.2.1 or higher to take advantage of this issue being fixed: https://github.com/ansible/ansible/issues/17490
 
@@ -92,6 +92,8 @@ For more information about the variables many can be found https://docs.docker.c
 | `docker_http_proxy` | No | `Undefined` | Set the Docker service to use HTTP_PROXY |
 | `docker_https_proxy` | No | `Undefined` | Set the Docker service to use HTTPS_PROXY |
 | `docker_no_proxy_params` | No | `Undefined` | Do not proxy for Docker service params |
+| `docker_service_enabled` | No | `yes` | Set the enable state of the docker service |
+| `docker_service_state` | No | `restarted` | Set the running start of the docker service |
 
 ## Example Playbooks
 
